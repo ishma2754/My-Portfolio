@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #adf0d4;
-    --secondary-color: #1fd8a4;
-    --bg-color: #0d1512;
+    --primary-color: #DBEAFE;
+    --secondary-color: #93C5FD;
+    --bg-color: #030615;
 }
 
 * {
@@ -24,6 +24,16 @@ body {
 
 .darkerText {
     color: var(--secondary-color);
+}
+
+.heavyText{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mediumText{
+    font-size: 20px;
+    font-weight: bold;
 }
 
 header,
@@ -154,18 +164,15 @@ section {
     margin-bottom: 24px;
 }
 
-.projectItem {
-    display: flex;
-    align-items: stretch;
-    gap: 24px;
-}
 
-.projectItem div:first-child {
+.first{
     display: flex;
     flex-direction: column;
     gap: 14px;
     flex: 1;
 }
+
+/*
 
 .projectItem>div:last-child {
     aspect-ratio: 16/9;
@@ -180,10 +187,42 @@ section {
     object-fit: cover;
 }
 
+*/
+.projectItem1 {
+    display: flex;
+    align-items: flex-start; 
+    gap: 24px; 
+}
+
+.projectItem1 p {
+    flex: 1; 
+    margin: 0; 
+    margin-top: 20px;
+}
+
+.imageContainer {
+    flex-shrink: 0; 
+    width: 200px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+
+
+
 .linkContainer {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 14px;
+    flex: 1;
 }
 
 .linkItem {
@@ -204,7 +243,10 @@ section {
     font-size: 0.9em;
 }
 
-@media (min-width: 640px) {
+
+
+
+@media (min-width: 480px) {
     .statsContainer {
         flex-direction: row;
     }
@@ -216,5 +258,31 @@ section {
     .aboutMe {
         width: 80%;
         margin-right: auto;
+    }
+
+   
+}
+
+@media (max-width: 640px) {
+    .projectItem1 {
+        display: flex;
+        flex-wrap: nowrap; 
+    }
+
+    .projectItem1 p {
+        flex: 1 1 auto; 
+        margin-top: 10px;
+        overflow-wrap: break-word; 
+    }
+
+    .imageContainer {
+        width: 180px; 
+        height: 150px; 
+        margin-top: 10px;
+    }
+
+    .imageContainer img {
+        width: 100%;
+        height: 100%; 
     }
 }
